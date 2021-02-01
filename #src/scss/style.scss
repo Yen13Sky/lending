@@ -37,6 +37,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*Подключение файлов стилей*/
 @import 'mixins.scss';
 @import 'blocks/header.scss';
+@import 'blocks/footer.scss';
 /*--------------------*/
 /*ibd*/
 .ibg{
@@ -361,8 +362,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 		}
 	}
 }
-.svg {
-}
+
 /*--------------------*/
 
 /*PORTFOLIO*/
@@ -418,7 +418,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 		}
 		&__btn{
 			padding: 0 30px;
-		}			
+		}	
+		&__footer{
+			padding: 50px 0;
+		}		
 	}
 	
 }
@@ -443,6 +446,91 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 		}
 	}
 }
+.subscribe {
+
+	&__body {
+		padding: 110px 0;
+		max-width: 534px;
+		margin: 0 auto;		
+		text-align: center;
+	}
+
+	&__logo {
+		margin: 0 0 39px 0;
+		.svg{
+			width: 94px;
+			height: 85px;
+		}
+	}
+
+	&__label {
+		line-height: 34px;
+		font-weight: 400;
+		font-style: italic;
+		color: #848789;
+		font-size: 24px;
+		margin: 0 0 35px 0;
+	}
+
+	&__form {
+		display: flex;
+	}
+
+	&__input {
+		flex: 1 1 auto;
+		padding: 0 8px 0 0;
+		.input{
+			width: 100%;
+			height: 69px;
+			background-color: #ffffff;
+			border: 1px solid #d3d7d9;
+			padding: 0 28px;
+			font-size: 20px;
+			line-height: 24px;
+			font-weight: 400;
+			font-style: italic;
+			color: #929292;
+			&.focus{
+				font-style: normal;
+				color: #333;				
+			}
+			&.err{
+				border: 1px solid red;
+			}
+		}
+	}
+
+	&__button{
+		flex: 0 0 126px;
+	}
+
+	&__btn {
+		width: 100%;
+		height: 69px;
+		background-color:#2c2c2c;
+		line-height: 24px;
+		font-weight: 300;
+		color: #ffffff;
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	@media (max-width:750px) {
+		&__body{
+			padding: 50px 0;
+		}
+	}
+	@media (max-width:500px){
+		&__form{
+			display: block;
+		}
+		&__input{
+			padding: 0 0 8px 0;
+		}
+	}
+}
+
+
+
 
 
 /*--------------------*/
